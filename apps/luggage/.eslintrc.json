@@ -3,6 +3,13 @@
   "ignorePatterns": ["!**/*"],
   "overrides": [
     {
+      "parserOptions": {
+        "ecmaVersion": "latest"
+      },
+
+      "env": {
+        "es6": true
+      },
       "files": ["*.ts"],
       "rules": {
         "@angular-eslint/directive-selector": [
