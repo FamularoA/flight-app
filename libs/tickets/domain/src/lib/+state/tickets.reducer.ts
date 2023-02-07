@@ -1,17 +1,19 @@
 import { createFeature, createReducer, on } from '@ngrx/store';
 import { Flight } from '../entities/flight';
-import { ticketsActions } from './actions';
+import { ticketsActions } from './tickets.actions';
 
 export interface TicketsState {
   flights: Flight[];
   basket: unknown;
   tickets: unknown;
+  hide: number[];
 }
 
 export const initialState: TicketsState = {
   flights: [],
   basket: {},
   tickets: {},
+  hide: [888, 887],
 };
 
 export const ticketsFeature = createFeature({
