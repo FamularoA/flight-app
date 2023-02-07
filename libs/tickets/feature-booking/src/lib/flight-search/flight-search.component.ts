@@ -6,7 +6,7 @@ import { CityPipe } from '@flight-demo/shared/ui-common';
 import {
   Flight,
   FlightService,
-  selectFilteredFlights,
+  selectFilteredFlightsWithParams,
   ticketsActions,
 } from '@flight-demo/tickets/domain';
 import { Store } from '@ngrx/store';
@@ -23,7 +23,13 @@ export class FlightSearchComponent {
   private flightService = inject(FlightService);
   private store = inject(Store);
 
-  flights$ = this.store.select(selectFilteredFlights);
+  hide = '';
+
+  hideArray = this.hide.split(',').map(function (item) {
+    return parseInt(item, 10);
+  });
+
+  flights$ = this.store.select(selectFilteredFlightsWithParams([872]));
 
   from = 'London';
   to = 'Paris';
