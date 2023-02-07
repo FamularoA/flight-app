@@ -6,5 +6,7 @@ export * from './infrastructure/default-flight.service';
 export * from './infrastructure/dummy-flight.service';
 export * from './infrastructure/flight.service';
 
-export * from './+store/actions';
-export * from './+store/reducer';
+export * from './+state/actions';
+export * from './+state/reducer';
+
+export * from './providers';
