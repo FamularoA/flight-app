@@ -88,6 +88,7 @@ export const APP_ROUTES: Routes = [
           import('@flight-demo/tickets/feature-booking').then(
             (m) => m.FLIGHT_BOOKING_ROUTES
           ),
+        data: { preload: true },
       },
       {
         path: 'next-flights',
@@ -95,6 +96,7 @@ export const APP_ROUTES: Routes = [
           import('@flight-demo/tickets/feature-next-flights').then(
             (m) => m.NextFlightsModule
           ),
+        data: { preload: false },
       },
       {
         path: 'about',
